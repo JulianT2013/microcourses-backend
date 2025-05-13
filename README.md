@@ -3,7 +3,7 @@
 
 ## 🎯 Project Scope
 
-This Node.js-based Express API powers the MicroCourses platform, handling course data and interfacing with a MongoDB database (via Mongoose). It supports CRUD operations, is modularized using routes and models, and is built for scalability and integration with a front-end React application.
+This Node.js-based Express API powers the MicroCourses platform, handling course data and interfacing with a MongoDB database (via Mongoose). It supports CRUD operations, is modularised using routes and models, and is built for scalability and integration with a front-end React application.
 
 ---
 
@@ -45,8 +45,7 @@ This Node.js-based Express API powers the MicroCourses platform, handling course
    DB_USER=your_db_user
    DB_PASS=your_password
    DB_CLUSTER=your_cluster.mongodb.net
-   DB_NAME=microcoursesDB
-   PORT=5000
+   DB_NAME=MicroCourses
    ```
 
 4. **Run the server**
