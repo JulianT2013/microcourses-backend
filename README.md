@@ -45,8 +45,7 @@ This Node.js-based Express API powers the MicroCourses platform, handling course
    DB_USER=your_db_user
    DB_PASS=your_password
    DB_CLUSTER=your_cluster.mongodb.net
-   DB_NAME=microcoursesDB
-   PORT=5000
+   DB_NAME=MicroCourses
    ```
 
 4. **Run the server**
