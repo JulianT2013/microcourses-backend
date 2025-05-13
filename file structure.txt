@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 microcourses-backend/
 ├── models/
 │   └── Course.js          # Mongoose model for courses
@@ -6,3 +7,13 @@ microcourses-backend/
 ├── .env                   # MongoDB connection string
 ├── server.js              # Entry point
 └── package.json
+=======
+microcourses-backend/
+├── models/
+│   └── Course.js          # Mongoose model for courses
+├── routes/
+│   └── courseRoutes.js    # Course-related API routes
+├── .env                   # MongoDB connection string
+├── server.js              # Entry point
+└── package.json
+>>>>>>> 65541c7078c64cedfe40a6b57d3ce7b141502f00
