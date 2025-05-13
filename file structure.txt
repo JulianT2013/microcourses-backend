@@ -1,0 +1,8 @@
+microcourses-backend/
+├── models/
+│   └── Course.js          # Mongoose model for courses
+├── routes/
+│   └── courseRoutes.js    # Course-related API routes
+├── .env                   # MongoDB connection string
+├── server.js              # Entry point
+└── package.json
