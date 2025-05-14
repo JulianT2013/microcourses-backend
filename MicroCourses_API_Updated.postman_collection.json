@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "MicroCourses API",
+    "_postman_id": "microcourses-api-collection",
+    "description": "Postman collection to test MicroCourses Express API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Courses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/courses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "courses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Course by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/courses/66501a2b3a5f44b3c3c3c3c3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "courses",
+            "66501a2b3a5f44b3c3c3c3c3"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create New Course",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Example Course\",\n  \"description\": \"This is a test course.\",\n  \"instructor\": \"Instructor Name\",\n  \"duration\": 5,\n  \"category\": \"Test Category\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/courses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "courses"
+          ]
+        }
+      }
+    }
+  ]
+}
