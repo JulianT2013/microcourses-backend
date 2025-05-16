@@ -42,11 +42,15 @@ This Node.js-based Express API powers the MicroCourses platform, handling course
 
 3. **Create a `.env` file**
    ```env
-   DB_USER=your_db_user
+   USE_LOCAL=true <-- Change to false to use Atlas
+   LOCAL_URI=mongodb://localhost:3000/microcourses
+
+   # Atlas fallback if USE_LOCAL=false
+   DB_USER=your_user
    DB_PASS=your_password
    DB_CLUSTER=your_cluster.mongodb.net
-   DB_NAME=microcoursesDB
-   PORT=5000
+   DB_NAME=microcourses
+
    ```
 
 4. **Run the server**
@@ -91,30 +95,6 @@ microcourses-backend/
 ├── server.js              # App entry point
 ├── package.json
 ```
-
----
-
-## 🔒 Security Best Practices
-
-- Keep `.env` in `.gitignore`
-- Use `dotenv` for DB credentials
-- Prefer MongoDB Atlas over local DB for production
-
----
-
-## 🧠 Notes
-
-- Database access credentials and cluster must be pre-configured in Atlas.
-- This component integrates with the React front-end via shared routes.
-
----
-
-## ✅ Component 2 Outcomes
-
-- 📡 REST API serving course data
-- 🔗 Secure connection to cloud MongoDB
-- ⚙️ Designed to scale with future endpoints
-
 
 ---
 
@@ -171,3 +151,46 @@ microcourses-backend/
 - ⚙️ Built a modular backend using MVC structure.
 - ✅ Validated API endpoints using Postman collection.
 - 🧪 Added logic to handle common production errors like invalid IDs and missing fields.
+
+---
+
+## 🔄 Switching Between Local and Atlas MongoDB
+
+You can choose which MongoDB source to use — either local (`mongodb://localhost...`) or cloud-based MongoDB Atlas.
+
+### ✅ Option 1: Using `.env`
+
+Modify the `.env` file:
+
+```env
+USE_LOCAL=true                       # Use local MongoDB
+LOCAL_URI=mongodb://localhost:27017/microcourses
+
+# If using Atlas (when USE_LOCAL is false)
+DB_USER=your_user
+DB_PASS=your_password
+DB_CLUSTER=your_cluster.mongodb.net
+DB_NAME=microcoursesDB
+```
+
+### ✅ Option 2: Using `npm` Scripts
+
+Modify `package.json`:
+
+```json
+"scripts": {
+  "start:local": "USE_LOCAL=true node server.js",
+  "start:atlas": "USE_LOCAL=false node server.js"
+}
+```
+
+Run one of the following in your terminal:
+
+```bash
+npm run start:local    # 👉 Connects to local MongoDB
+npm run start:atlas    # 👉 Connects to MongoDB Atlas
+```
+
+### ✅ Option 3: Interactive CLI Prompt (optional for CLI users)
+
+You can prompt the user at runtime by using the `prompt-sync` library. This is mainly for interactive tools or dev testing.
