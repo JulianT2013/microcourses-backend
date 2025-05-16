@@ -42,7 +42,7 @@ This Node.js-based Express API powers the MicroCourses platform, handling course
 
 3. **Create a `.env` file**
    ```env
-   USE_LOCAL=true <-- Change to false to use Atlas
+   USE_LOCAL=true // Change to false to use Atlas
    LOCAL_URI=mongodb://localhost:3000/microcourses
 
    # Atlas fallback if USE_LOCAL=false
