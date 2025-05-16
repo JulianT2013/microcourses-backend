@@ -16,7 +16,7 @@ if (process.env.USE_LOCAL === 'true') {
   const { DB_USER, DB_PASS, DB_CLUSTER, DB_NAME } = process.env;
   if (!DB_USER || !DB_PASS || !DB_CLUSTER || !DB_NAME) {
     console.error('❌ Missing Atlas credentials in .env');
-    process.exit(1);
+    return;
   }
   MONGO_URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_CLUSTER}.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 }
