@@ -1,5 +1,6 @@
 
-# 🧠 MicroCourses — Component 2: Back-End Development (Node.js + Express)
+# 🧠 MicroCourses — Component 2:
+Back-End Development (Node.js + Express)
 
 ## 🎯 Project Scope
 
