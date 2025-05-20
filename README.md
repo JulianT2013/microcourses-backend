@@ -131,6 +131,15 @@ microcourses-backend/
 - **GET /courses/:id** → Returns a specific course.
 - **POST /courses** → Accepts JSON to create a new course.
 
+🔍 Ensure correct ObjectId format for /courses/:id
+
+To test or use **GET /courses/:id**, always provide a valid 24-character MongoDB ObjectId.
+Invalid formats will return a 400 Bad Request error. Example of a valid URL:
+
+    GET http://localhost:5000/courses/6645d8f79e4c1f9f1e47a123
+
+Ensure that your frontend or API testing tool (e.g., Postman) uses real IDs returned from GET /courses.
+
 ---
 
 ## 🧠 Problem-Solving
